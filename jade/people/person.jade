@@ -1,5 +1,14 @@
 template(name="person")
-  li(class="{{#if checked}}checked{{/if}}")
-    button.delete &times;
+  .person(class="{{#if checked}}checked{{/if}}")
+    button.delete-person &times;
     input(type="checkbox", checked="#{checked}", class="toggle-checked")
     span=name
+    ul.cards
+      each userCards
+        li 
+          select.card
+            option
+            each availableCards
+              option(value=_id selected="{{#if iscool}}selected{{/if}}")=title
+              
+    button.add-card Add Card
