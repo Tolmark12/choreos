@@ -1,0 +1,5 @@
+template(name="person")
+  li(class="{{#if checked}}checked{{/if}}")
+    button.delete &times;
+    input(type="checkbox", checked="#{checked}", class="toggle-checked")
+    span=name

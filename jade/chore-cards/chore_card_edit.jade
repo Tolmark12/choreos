@@ -1,0 +1,10 @@
+template(name="chore_card_edit")
+  .chore-card
+    button.delete-chore &times;
+    =title
+    ul
+      each chores
+        li
+          +chore_edit
+    button.add-chore Add Chore
+        

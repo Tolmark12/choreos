@@ -1,0 +1,5 @@
+.chore-cards-edit   {
+  .chore-card       { min-width:180px; display:inline-block; background:red; padding:10px; margin:0 5px 5px 0; position:relative; vertical-align:top;
+    .delete-chore   { position: absolute; top:10px; right:10px; }
+  }
+}

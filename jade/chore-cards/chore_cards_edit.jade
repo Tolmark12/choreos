@@ -1,0 +1,8 @@
+template(name="chore_cards_edit")
+  .chore-cards-edit
+    form.new-chore-card
+      input.title(type="text" name="title" placeholder="Card Title")
+      input.create-new-chore(type="button" value="New Card")
+          
+    each cards
+      +chore_card_edit
