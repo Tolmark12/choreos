@@ -7,7 +7,7 @@ if Meteor.isClient
     cards: ()=>
       return @ChoreCards.find {}
   Template.chore_cards_edit.events
-    "click .delete-chore"     : () ->
+    "click .delete-chore"   : () ->
       ChoreCards.remove this._id
     "click .create-new-chore": (event, template) =>
       title  = template.$('input.title').val()

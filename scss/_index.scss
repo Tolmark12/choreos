@@ -1,0 +1,47 @@
+$red1   :#D94A64;
+$red2   :#FF5776;
+$red3   :#FF8097;
+
+$orange1:#EB8246;
+$orange2:#FF9A5D;
+$orange3:#FFB181;
+
+$green1 :#00A34D;
+$green2 :#00B556;
+$green3 :#00DE6A;
+
+$gray   :#B5B5B5;
+
+$card-padding:20px;
+
+.index                {
+  .person             { width:100%; margin-bottom:20px;
+    .top              { width:100%; border-bottom:solid 1px #DADADA; margin-bottom:20px;
+      .name           { font-size:49px; color:$gray; }
+    }
+    .todays-chores    { display:table;
+      .chore-card     { display: table-cell; background:$red1; height:100%; font-size:25px; vertical-align:top; display:inline-block; margin:0 15px 5px 0;  min-width:265px;
+        .title        { background:white; color:$red1; }
+        .chores       { color:white;
+          &:before    { display:block; background:$red2; width:125px; height:125px; content:""; margin-bottom:10px}
+          .chore      { padding:10px $card-padding; cursor:pointer;
+            &:hover   { background:$red2; }
+          }
+        }
+        &.doing       { background:$orange1;
+          .title      { color:$orange1; }
+          .chores     {
+            &:before  { background:$orange2; }
+          }
+        }
+        &.done        { background:$green1;
+          .title      { color:$green1; }
+          .chores     {
+            &:before  { background:$green2; }
+          }
+        }
+      }
+    }
+  }
+
+}

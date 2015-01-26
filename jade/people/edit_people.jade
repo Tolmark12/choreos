@@ -1,0 +1,10 @@
+template(name="edit_people")
+  .people-edit
+    ul
+      each people
+        +edit_person
+    h4 New Person
+    form.new-person
+      input(type="text" name="text" placeholder="Name")
+          
+          

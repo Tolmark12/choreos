@@ -1,4 +1,4 @@
-template(name="person")
+template(name="edit_person")
   .person(class="{{#if checked}}checked{{/if}}")
     button.delete-person &times;
     input(type="checkbox", checked="#{checked}", class="toggle-checked")
@@ -10,5 +10,6 @@ template(name="person")
             option
             each availableCards
               option(value=_id selected="{{#if iscool}}selected{{/if}}")=title
+          button.remove-card(card-id=this) &times;
               
     button.add-card Add Card

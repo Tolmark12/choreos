@@ -1,0 +1,15 @@
+template(name="index")
+  .index
+    each people
+      .person
+        .top 
+          .name=name
+        .todays-chores
+          each chore_cards
+            .chore-card
+              .title=title
+              .status-icon
+              .chores
+                each chores
+                  .chore=text
+            

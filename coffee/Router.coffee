@@ -1,8 +1,12 @@
 Router.configure
   layoutTemplate:"app-layout"
 
+
+Router.route '/', ->
+  this.render 'index'
+
 Router.route '/people', ->
-  this.render 'people'
+  this.render 'edit_people'
 
 Router.route '/cards', ->
   this.render 'chore_cards_edit'
