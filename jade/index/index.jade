@@ -4,12 +4,18 @@ template(name="index")
       .person
         .top 
           .name=name
+          .history
+            .row
+              each historic_days
+                .day(class=historic_card_class)
+                  each historic_chore_card
+                    .card(class=this)
         .todays-chores
           each chore_cards
-            .chore-card
+            .chore-card(class="#{card_status}")
               .title=title
               .status-icon
               .chores
                 each chores
-                  .chore=text
+                  .chore(data-person="{{../../_id._str}}" data-id=_id._str class="{{#if choreIsComplete}}complete{{/if}}")=text
             

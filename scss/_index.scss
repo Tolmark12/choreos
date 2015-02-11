@@ -15,9 +15,20 @@ $gray   :#B5B5B5;
 $card-padding:20px;
 
 .index                {
-  .person             { width:100%; margin-bottom:20px;
-    .top              { width:100%; border-bottom:solid 1px #DADADA; margin-bottom:20px;
+  .person             { width:100%; margin:90px 0;
+    .top              { width:100%; border-bottom:solid 1px #DADADA; margin-bottom:20px; position:relative;
       .name           { font-size:49px; color:$gray; }
+      .history        { position:absolute; top:0; right:0;
+          // .row        { display:table-row;}
+        .day          { width:58px; height:56px; display:inline-block;  margin-left:5px; display:table; float: right;
+          &.no-cards  { background:$gray; opacity:0.2; }
+          .card       { background:$red1; display:table-cell; border-right:solid 1px white;
+            // &:last-child { border-right:0; }
+            &.done    { background:$green1; }
+            &.doing   { background:$orange1; }
+          }
+        }
+      }
     }
     .todays-chores    { display:table;
       .chore-card     { display: table-cell; background:$red1; height:100%; font-size:25px; vertical-align:top; display:inline-block; margin:0 15px 5px 0;  min-width:265px;
@@ -25,6 +36,7 @@ $card-padding:20px;
         .chores       { color:white;
           &:before    { display:block; background:$red2; width:125px; height:125px; content:""; margin-bottom:10px}
           .chore      { padding:10px $card-padding; cursor:pointer;
+            &.complete{ text-decoration:line-through; opacity:0.3;}
             &:hover   { background:$red2; }
           }
         }
@@ -32,12 +44,18 @@ $card-padding:20px;
           .title      { color:$orange1; }
           .chores     {
             &:before  { background:$orange2; }
+            .chore    {
+              &:hover { background:$orange2; }
+            }
           }
         }
         &.done        { background:$green1;
           .title      { color:$green1; }
           .chores     {
             &:before  { background:$green2; }
+            .chore    {
+              &:hover { background:$green2; }
+            }
           }
         }
       }

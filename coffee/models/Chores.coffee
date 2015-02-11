@@ -1,1 +1,1 @@
-@Chores = new Mongo.Collection "chores"
+@Chores = new Mongo.Collection "chores", {idGeneration : 'MONGO'}

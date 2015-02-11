@@ -1,0 +1,9 @@
+@mixin transition ($property:all, $duration:0.05s, $timing:linear, $delay:0s) {
+  @if $property != none {
+    -webkit-transition: $property $duration $timing $delay;
+    transition: $property $duration $timing $delay;
+  } @else {
+    -webkit-transition: none;
+    transition: none;
+  }
+}

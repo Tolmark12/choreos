@@ -1,7 +1,6 @@
 /* CSS declarations go here */
-body{
-  background:white; font-family: 'Open Sans', sans-serif; margin:0; padding:0;
-}
-ul { list-style-type: none; padding:0; margin:0; }
+body     {background:white; font-family: 'Open Sans', sans-serif; margin:0; padding:0; }
+body *   { @include transition(all, 0.2s); }
+ul       { list-style-type: none; padding:0; margin:0; }
 .wrapper { max-width:1000px; margin:0 auto; }
 .checked {opacity:0.2}

@@ -1,4 +1,4 @@
-@ChoreCards = ChoreCards = new Mongo.Collection "chore_cards"
+share.ChoreCards = @ChoreCards = ChoreCards = new Mongo.Collection "chore_cards", {idGeneration : 'MONGO'}
 
 if Meteor.isClient
 
@@ -35,5 +35,6 @@ if Meteor.isClient
       ChoreCards.update this._id, { $set:{chores:this.chores} }
     "click .remove-chore" : (e,template)->
       ChoreCards.update template.data._id, { $pull: {'chores': this._id } }
+      Chores.remove this._id
     "keyup .chore input" : (e, template)->
       window.Chores.update this._id, { $set:{text:$(e.target).val()} }

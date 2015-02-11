@@ -9,7 +9,7 @@ template(name="edit_person")
           select.card
             option
             each availableCards
-              option(value=_id selected="{{#if iscool}}selected{{/if}}")=title
+              option(value=_id._str selected="{{#if isSelected}}selected{{/if}}")=title
           button.remove-card(card-id=this) &times;
               
     button.add-card Add Card
